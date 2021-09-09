@@ -89,11 +89,11 @@ function App() {
   const RenderIconStatus = ({ tipoEvento, statusEvento }) => {
     
     if (tipoEvento === "DO" || tipoEvento === "RO") {
-      return <ObjetoEncaminhado />;
+      return <ObjetoEncaminhado className="w-6 h-6"/>;
     } 
     
     if (tipoEvento === "OEC") {
-      return <SaiuEntrega />;
+      return <SaiuEntrega className="w-6 h-6"/>;
     } 
     
     if (
@@ -116,7 +116,7 @@ function App() {
           statusEvento === "68" ||
           statusEvento === "70"))
     ) {
-      return <ObjetoEntregue />;
+      return <ObjetoEntregue className="w-6 h-6"/>;
     }
     
     if (

@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import {ObjetoEncaminhado, ObjetoEntregue, ObjetoPostado, SaiuEntrega, StatusDefaultIcon} from "./eventosIcons"
+import {
+  ObjetoEncaminhado,
+  ObjetoEntregue,
+  ObjetoPostado,
+  SaiuEntrega,
+  StatusDefaultIcon,
+} from "./eventosIcons";
 import "react-toastify/dist/ReactToastify.css";
 import api from "./services/api";
 import logo from "./assets/img/package.svg";
 import { ReactComponent as LoadingIcon } from "./assets/img/loading.svg";
+import { ReactComponent as TrashIcon } from "./assets/img/trash.svg";
 
 function App() {
   const [objetos, setObjetos] = useState([]);
@@ -68,8 +75,7 @@ function App() {
         draggable: true,
         progress: undefined,
       });
-      resetarFormulario()
-
+      resetarFormulario();
     } catch (error) {
       toast.warning("Encomenda não encontrada!", {
         position: "top-right",
@@ -85,9 +91,22 @@ function App() {
     //localStorage.setItem("@faro-encomendas/objetos", )
   }
 
+  function handleDeleteOrder(code) {
+    if (!objetos || objetos.length === 0) {
+      toast.warning("Encomenda não encontrada!", {autoClose: 2500});
+      return;
+    }
+    const novoArrayObjetos = objetos.filter(
+      item => item.code !== code
+    );
+    toast.success("Encomenda excluida!", {autoClose: 2500});
+    localStorage.setItem("@faro-encomendas/objetos", JSON.stringify(novoArrayObjetos))
+    setObjetos(novoArrayObjetos);
+  }
+
   function resetarFormulario() {
-    setCode("")
-    setDescricao("")
+    setCode("");
+    setDescricao("");
   }
   const checkObjetoExiste = (codeEncomenda) => {
     let existe = false;
@@ -102,15 +121,14 @@ function App() {
     return existe;
   };
   const RenderIconStatus = ({ tipoEvento, statusEvento }) => {
-    
     if (tipoEvento === "DO" || tipoEvento === "RO") {
-      return <ObjetoEncaminhado className="w-6 h-6"/>;
-    } 
-    
+      return <ObjetoEncaminhado className="w-6 h-6" />;
+    }
+
     if (tipoEvento === "OEC") {
-      return <SaiuEntrega className="w-6 h-6"/>;
-    } 
-    
+      return <SaiuEntrega className="w-6 h-6" />;
+    }
+
     if (
       (tipoEvento === "BDE" &&
         (statusEvento === "01" ||
@@ -131,19 +149,18 @@ function App() {
           statusEvento === "68" ||
           statusEvento === "70"))
     ) {
-      return <ObjetoEntregue className="w-6 h-6"/>;
+      return <ObjetoEntregue className="w-6 h-6" />;
     }
-    
+
     if (
       tipoEvento === "PO" &&
       (statusEvento === "01" || statusEvento === "09")
     ) {
-      return <ObjetoPostado className="w-6 h-6"/>;
+      return <ObjetoPostado className="w-6 h-6" />;
     }
 
-    return <StatusDefaultIcon className="w-6 h-6"/>;
+    return <StatusDefaultIcon className="w-6 h-6" />;
   };
-
   const ButtonAddRastreio = ({ loading, rest }) => {
     return (
       <button
@@ -205,7 +222,7 @@ function App() {
                         statusEvento={item.ultimo_evento.status}
                       />
                     </div>
-                    <div className="ml-4">
+                    <div className="mx-4 flex-1">
                       <h2 className="text-lg font-semibold">
                         {item.descricao}
                       </h2>
@@ -214,12 +231,21 @@ function App() {
                       </span>
                       <span>{item.code}</span>
                     </div>
+                    <div>
+                      <TrashIcon
+                        onClick={() => handleDeleteOrder(item.code)}
+                        className="w-8 border p-1 rounded-md text-red-500 border-red-300"
+                      />
+                    </div>
                   </li>
                 );
-              })
-            }
+              })}
 
-            {objetos.length === 0 && <h2 className="text-center text-gray-600 mt-2">Nenhuma encomenda!</h2>}
+            {objetos.length === 0 && (
+              <h2 className="text-center text-gray-600 mt-2">
+                Nenhuma encomenda!
+              </h2>
+            )}
           </ul>
         </div>
       </div>

@@ -75,8 +75,7 @@ This project was developed using the following technologies:
 
 ### In Progress
 
-- [ ] Deletar encomendas
-- [x] Resetar formulário de cadastro após sucesso
+- [ ]
 
 ### Done ✓
 
@@ -85,7 +84,8 @@ This project was developed using the following technologies:
 - [x] Lista encomendas com o último status
 - [x] Verificar se a encomenda já foi adicionada
 - [x] Criar um componente que retorne dinamicamente o icone do status da encomenda através do tipo e status da encomenda
-- [ ]
+- [x] Deletar encomendas
+- [x] Resetar formulário de cadastro após sucesso
 
 ## 🚀 Getting started
 

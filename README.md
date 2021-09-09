@@ -76,7 +76,7 @@ This project was developed using the following technologies:
 ### In Progress
 
 - [ ] Deletar encomendas
-- [ ] Resetar formulário de cadastro após sucesso
+- [x] Resetar formulário de cadastro após sucesso
 
 ### Done ✓
 

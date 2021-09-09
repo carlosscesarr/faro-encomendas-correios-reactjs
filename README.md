@@ -42,7 +42,8 @@ This project was developed using the following technologies:
 <img alt="Faro Encomendas Correios" src="https://drive.google.com/uc?export=download&id=1fZU4JBah5L2eBL_qs18U4Q2YARa9CkWq" width="800px">
 
 ## 🔥 Preview MOBILE
-<img alt="Faro Encomendas Correios" src="https://drive.google.com/uc?export=download&id=1AKp2BqVO0KvgQeAD-e5F5VGRng4t-iLl" width="200px">
+<img alt="Faro Encomendas Correios" style="inline-block" src="https://drive.google.com/uc?export=download&id=1AKp2BqVO0KvgQeAD-e5F5VGRng4t-iLl" width="200px">
+<img alt="Verificação encomenda já adicionada" style="inline-block" src="https://drive.google.com/uc?export=download&id=1uEcQL6_1RJ9afFVT6bUFqf7LcJnNrwN4" width="200px">
 
 ## 🔥 Preview ONLINE
 - [Projeto online ->](https://dazzling-wing-bf8e1b.netlify.app/)

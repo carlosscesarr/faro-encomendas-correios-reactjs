@@ -21,15 +21,17 @@ function App() {
 
   useEffect(() => {
     async function detetarCodigoAreaTransferencia() {
-      try {
+      const clipboard = navigator.clipboard;
+
+      if (typeof clipboard != "undefined") {
         navigator.clipboard.readText().then((text) => {
           if (text && [...text].length === 13) {
             if (!checkObjetoExiste(text)) {
               setCode(text);
             }
           }
-        });
-      } catch (error) {}
+        }).catch(error => {});
+      }
     }
 
     detetarCodigoAreaTransferencia();

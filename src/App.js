@@ -59,6 +59,17 @@ function App() {
         JSON.stringify([rastreio, ...objetos])
       );
       setObjetos([rastreio, ...objetos]);
+      toast.success("Encomenda adicionada!", {
+        position: "top-right",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      resetarFormulario()
+
     } catch (error) {
       toast.warning("Encomenda não encontrada!", {
         position: "top-right",
@@ -74,6 +85,10 @@ function App() {
     //localStorage.setItem("@faro-encomendas/objetos", )
   }
 
+  function resetarFormulario() {
+    setCode("")
+    setDescricao("")
+  }
   const checkObjetoExiste = (codeEncomenda) => {
     let existe = false;
     if (objetos.length > 0) {

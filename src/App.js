@@ -276,7 +276,7 @@ function App() {
                     <div>
                       <TrashIcon
                         onClick={() => handleDeleteOrder(item.code)}
-                        className="w-8 border p-1 rounded-md text-red-500 border-red-300"
+                        className="w-8 border p-1 rounded-md text-red-500 border-red-300 cursor-pointer"
                       />
                     </div>
                   </li>

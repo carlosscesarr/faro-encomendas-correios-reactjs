@@ -67,15 +67,16 @@ This project was developed using the following technologies:
 - [ ] Listar encomendas com o último status
 - [ ] Verificar se a encomenda já foi adicionada
 - [ ] Criar um componente que retorne dinamicamente o icone do status da encomenda através do tipo e status
+- [ ] Deletar encomendas
+- [ ] Detectar se existe código da encomenda copiado na área de transferência e inserir no campo Cód. objeto
+- [ ] Resetar formulário de cadastro após sucesso
 - [ ] Validar formato do código de rastreio
 - [ ] Alterar tipo de teclado de acordo com o preenchimento do código de rastreio
 - [ ] Notificar usuário de atualização da encomenda
-- [ ] Deletar encomendas
-- [ ] Resetar formulário de cadastro após sucesso
 
 ### In Progress
 
-- [ ]
+- [ ] Detectar se existe código da encomenda copiado na área de transferência e inserir no campo Cód. objeto
 
 ### Done ✓
 

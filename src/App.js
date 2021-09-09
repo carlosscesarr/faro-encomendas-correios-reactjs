@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import {ObjetoEncaminhado, ObjetoEntregue, ObjetoPostado, SaiuEntrega, StatusDefaultIcon} from "./eventosIcons"
+import objpostado from "./eventosIcons/objetoPostado.svg"
 import "react-toastify/dist/ReactToastify.css";
 import api from "./services/api";
 import logo from "./assets/img/package.svg";
 import { ReactComponent as LoadingIcon } from "./assets/img/loading.svg";
+import { ReactComponent as Objpost } from "./eventosIcons/objetoPostado.svg";
 
 function App() {
   const [objetos, setObjetos] = useState([]);
@@ -172,6 +174,7 @@ function App() {
               required
               onChange={(e) => setCode(e.target.value)}
             />
+            <Objpost className="w-6 h-6 text-purple-500"/>
             <ButtonAddRastreio type="submit" loading={loading} />
           </form>
         </div>

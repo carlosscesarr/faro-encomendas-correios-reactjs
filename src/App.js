@@ -34,26 +34,40 @@ function App() {
         .then((text) => {
           if (text && [...text].length === 13) {
             let existe = false;
-            if (encomendas.length > 0) {
-              encomendas.forEach((item) => {
-                if (item.code === text) {
-                  existe = true;
-                  return;
-                }
-              });
-            }
-            if (!existe) {
-              setCode(text);
+            if (/^[A-Z]{2}[0-9]{9}[A-Z]{2}$/.test(text)) {
+              if (encomendas.length > 0) {
+                encomendas.forEach((item) => {
+                  if (item.code === text) {
+                    existe = true;
+                    return;
+                  }
+                });
+              }
+              if (!existe) {
+                setCode(text);
+              }
             }
           }
         })
         .catch((error) => {});
     }
   }, []);
-
+  function validaCodigoEncomenda(codeEncomenda) {
+    let regex = /^[A-Z]{2}[0-9]{9}[A-Z]{2}$/;
+    return regex.test(codeEncomenda);
+  }
   async function handleSubmitAdicionarRastreio(e) {
     e.preventDefault();
     setLoading(true);
+    if (!validaCodigoEncomenda(code)) {
+      toast.warning("Cód. Objeto inválido", {
+        position: "top-right",
+        autoClose: 2500,
+      });
+      setLoading(false);
+      return;
+    }
+
     const objetoExiste = checkObjetoExiste(code);
     if (objetoExiste) {
       setTimeout(() => {

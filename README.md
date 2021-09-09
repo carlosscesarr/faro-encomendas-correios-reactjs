@@ -80,7 +80,7 @@ This project was developed using the following technologies:
 
 ### In Progress
 
-- [ ] Validar formato do código de rastreio
+- [x] Validar formato do código de rastreio
 - [ ] Alterar tipo de teclado de acordo com o preenchimento do código de rastreio
 
 ### Done ✓

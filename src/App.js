@@ -20,10 +20,27 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    function detetarCodigoAreaTransferencia() {
+      try {
+        navigator.clipboard.readText().then((text) => {
+          if (text && [...text].length === 13) {
+            if (!checkObjetoExiste(text)) {
+              setCode(text);
+            }
+          }
+        });
+      } catch (error) {}
+    }
+
+    detetarCodigoAreaTransferencia();
+  });
+
+  useEffect(() => {
     let obj = localStorage.getItem("@faro-encomendas/objetos") ?? [];
     if (obj.length > 0) {
       obj = JSON.parse(obj);
     }
+
     setObjetos(obj);
   }, []);
 
@@ -93,14 +110,15 @@ function App() {
 
   function handleDeleteOrder(code) {
     if (!objetos || objetos.length === 0) {
-      toast.warning("Encomenda não encontrada!", {autoClose: 2500});
+      toast.warning("Encomenda não encontrada!", { autoClose: 2500 });
       return;
     }
-    const novoArrayObjetos = objetos.filter(
-      item => item.code !== code
+    const novoArrayObjetos = objetos.filter((item) => item.code !== code);
+    toast.success("Encomenda excluida!", { autoClose: 2500 });
+    localStorage.setItem(
+      "@faro-encomendas/objetos",
+      JSON.stringify(novoArrayObjetos)
     );
-    toast.success("Encomenda excluida!", {autoClose: 2500});
-    localStorage.setItem("@faro-encomendas/objetos", JSON.stringify(novoArrayObjetos))
     setObjetos(novoArrayObjetos);
   }
 

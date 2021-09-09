@@ -20,7 +20,7 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    function detetarCodigoAreaTransferencia() {
+    async function detetarCodigoAreaTransferencia() {
       try {
         navigator.clipboard.readText().then((text) => {
           if (text && [...text].length === 13) {

@@ -20,30 +20,35 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    async function detetarCodigoAreaTransferencia() {
-      const clipboard = navigator.clipboard;
+    let encomendas = localStorage.getItem("@faro-encomendas/objetos") ?? [];
+    if (encomendas.length > 0) {
+      encomendas = JSON.parse(encomendas);
+    }
+    setObjetos(encomendas);
 
-      if (typeof clipboard != "undefined") {
-        navigator.clipboard.readText().then((text) => {
+    const clipboard = navigator.clipboard;
+
+    if (typeof clipboard != "undefined") {
+      navigator.clipboard
+        .readText()
+        .then((text) => {
           if (text && [...text].length === 13) {
-            if (!checkObjetoExiste(text)) {
+            let existe = false;
+            if (encomendas.length > 0) {
+              encomendas.forEach((item) => {
+                if (item.code === text) {
+                  existe = true;
+                  return;
+                }
+              });
+            }
+            if (!existe) {
               setCode(text);
             }
           }
-        }).catch(error => {});
-      }
+        })
+        .catch((error) => {});
     }
-
-    detetarCodigoAreaTransferencia();
-  });
-
-  useEffect(() => {
-    let obj = localStorage.getItem("@faro-encomendas/objetos") ?? [];
-    if (obj.length > 0) {
-      obj = JSON.parse(obj);
-    }
-
-    setObjetos(obj);
   }, []);
 
   async function handleSubmitAdicionarRastreio(e) {
@@ -130,14 +135,17 @@ function App() {
   }
   const checkObjetoExiste = (codeEncomenda) => {
     let existe = false;
-    if (objetos.length > 0) {
-      objetos.forEach((item) => {
-        if (item.code === codeEncomenda) {
-          existe = true;
-          return;
-        }
-      });
+    if (objetos.length === 0) {
+      return existe;
     }
+
+    objetos.forEach((item) => {
+      if (item.code === codeEncomenda) {
+        existe = true;
+        return;
+      }
+    });
+
     return existe;
   };
   const RenderIconStatus = ({ tipoEvento, statusEvento }) => {

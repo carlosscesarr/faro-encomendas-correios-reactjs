@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img alt="Faro Encomendas Correios" title="Gerador Senha" src="" />
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-preview">Preview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <!--<a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;-->
+  <!--<a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;-->
+  <!--<a href="#-license">License</a>-->
+</p>
 
-## Available Scripts
+<p align="center">
+  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=5965E0&labelColor=121214" alt="License">
+  
+  <img src="https://img.shields.io/github/forks/carlosscesarr/gerador-senha-react-native?label=forks&message=MIT&color=5965E0&labelColor=121214" alt="Forks">     
 
-In the project directory, you can run:
+  <img src="https://img.shields.io/github/stars/carlosscesarr/gerador-senha-react-native?label=stars&message=MIT&color=5965E0&labelColor=121214" alt="Stars">
+</p>
 
-### `yarn start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+  <img alt="Faro Encomendas Correios" src="" width="120px">
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🧪 Technologies
 
-### `yarn test`
+This project was developed using the following technologies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [React JS](https://reactjs.org)
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Tailwindcss](https://tailwindcss.com/)
+- [Axios](https://axios-http.com/docs/intro)
 
-### `yarn build`
+## Services
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Api Encomendas Correios](https://correios.contrateumdev.com.br/api)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project was developed using the following technologies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [React JS](https://reactjs.org)
 
-### `yarn eject`
+## 🔥 Preview DESKTOP
+<img alt="Faro Encomendas Correios" src="https://drive.google.com/uc?export=download&id=1fZU4JBah5L2eBL_qs18U4Q2YARa9CkWq" width="800px">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🔥 Preview MOBILE
+<img alt="Faro Encomendas Correios" src="https://drive.google.com/uc?export=download&id=1AKp2BqVO0KvgQeAD-e5F5VGRng4t-iLl" width="200px">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Todo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [ ] Utilizar e configurar tailwindcss
+- [ ] Persistir encomendas localstorage
+- [ ] Lista encomendas com o último status
+- [ ] Verificar se a encomenda já foi adicionada
+- [ ] Criar um componente que retorne dinamicamente o icone do status da encomenda através do tipo e status da encomenda
+- [ ] Validar formato do código de rastreio
+- [ ] Alterar tipo de teclado de acordo com o preenchimento do código de rastreio
+- [ ] Notificar usuário de atualização da encomenda
+- [ ] Deletar encomendas
+- [ ] Resetar formulário de cadastro após sucesso
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### In Progress
 
-## Learn More
+- [ ]
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Done ✓
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [x] Utilizar e configurar tailwindcss
+- [x] Persistir encomendas localstorage
+- [x] Lista encomendas com o último status
+- [x] Verificar se a encomenda já foi adicionada
+- [x] Criar um componente que retorne dinamicamente o icone do status da encomenda através do tipo e status da encomenda
+- [ ]
 
-### Code Splitting
+## 🚀 Getting started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Clone the project and access the folder
 
-### Analyzing the Bundle Size
+```bash
+$ git clone https://github.com/carlosscesarr/faro-encomendas-correios-reactjs.git && cd faro-encomendas-correios-reactjs
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Follow the steps below
+```bash
+# Install the dependencies
+$ yarn install
 
-### Making a Progressive Web App
+# Start the project
+$ yarn start
+```
+<!--
+## 🔖 Layout
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+You can view the project layout through the links below:
 
-### Advanced Configuration
+- [Layout Web](https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/Move.it-1.0) 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Remembering that you need to have a [Figma](http://figma.com/) account to access it.
+## 📝 License
 
-### Deployment
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
+-->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">Made with 💜 by César Lima</p>

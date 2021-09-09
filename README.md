@@ -64,9 +64,9 @@ This project was developed using the following technologies:
 
 - [ ] Utilizar e configurar tailwindcss
 - [ ] Persistir encomendas localstorage
-- [ ] Lista encomendas com o último status
+- [ ] Listar encomendas com o último status
 - [ ] Verificar se a encomenda já foi adicionada
-- [ ] Criar um componente que retorne dinamicamente o icone do status da encomenda através do tipo e status da encomenda
+- [ ] Criar um componente que retorne dinamicamente o icone do status da encomenda através do tipo e status
 - [ ] Validar formato do código de rastreio
 - [ ] Alterar tipo de teclado de acordo com o preenchimento do código de rastreio
 - [ ] Notificar usuário de atualização da encomenda

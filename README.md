@@ -39,20 +39,24 @@ This project was developed using the following technologies:
 - [Api Encomendas Correios](https://documenter.getpostman.com/view/11074732/TzJpgyny)
 
 ## 🔥 Preview DESKTOP
-<img alt="Faro Encomendas Correios" src="https://drive.google.com/uc?export=download&id=1fZU4JBah5L2eBL_qs18U4Q2YARa9CkWq" width="800px">
+<img alt="Faro Encomendas Correios" src="https://drive.google.com/uc?export=download&id=1YX8lZTuaQJsCw4oq0PeLhWsT0AsBFT7x" width="800px">
 
 ## 🔥 Preview MOBILE
 <table>
   <tr>
     <td></td>
      <td></td>
+     <td></td>
   </tr>
   <tr>
     <td>
-        <img alt="Faro Encomendas Correios" src="https://drive.google.com/uc?export=download&id=1AKp2BqVO0KvgQeAD-e5F5VGRng4t-iLl" width="200px">
+        <img alt="Faro Encomendas Correios" src="https://drive.google.com/uc?export=download&id=10scXBxZnXj67It-E34AZCEmQYF9gtN3I" width="200px">
     </td>
     <td>
-        <img alt="Verificação encomenda já adicionada" src="https://drive.google.com/uc?export=download&id=1uEcQL6_1RJ9afFVT6bUFqf7LcJnNrwN4" width="200px">
+        <img alt="Verificação encomenda já adicionada" src="https://drive.google.com/uc?export=download&id=1zDkoICo10FZ7JLMV64uAf4I_lBh06OCx" width="200px">
+    </td>
+    <td>
+        <img alt="Verificação encomenda adicionada com sucesso" src="https://drive.google.com/uc?export=download&id=1sUY7frrZOmbtzoQ5eR0askm-eiBbhKTI" width="200px">
     </td>
   </tr>
  </table>

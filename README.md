@@ -36,7 +36,7 @@ This project was developed using the following technologies:
 
 ## Services
 
-- [Api Encomendas Correios](https://correios.contrateumdev.com.br/api)
+- [Api Encomendas Correios](https://documenter.getpostman.com/view/11074732/TzJpgyny)
 
 ## 🔥 Preview DESKTOP
 <img alt="Faro Encomendas Correios" src="https://drive.google.com/uc?export=download&id=1fZU4JBah5L2eBL_qs18U4Q2YARa9CkWq" width="800px">

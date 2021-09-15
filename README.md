@@ -77,10 +77,10 @@ This project was developed using the following technologies:
 - [ ] Validar formato do código de rastreio
 - [ ] Alterar tipo de teclado de acordo com o preenchimento do código de rastreio
 - [ ] Notificar usuário de atualização da encomenda
+- [ ] Adicionar encomenda com código de rastreio válido porém não encontrado na base dos correios
 
 ### In Progress
 
-- [x] Validar formato do código de rastreio
 - [ ] Alterar tipo de teclado de acordo com o preenchimento do código de rastreio
 
 ### Done ✓
@@ -93,6 +93,8 @@ This project was developed using the following technologies:
 - [x] Deletar encomendas
 - [x] Detectar se existe código da encomenda copiado na área de transferência e inserir no campo Cód. objeto caso o browser tenha suporte a tal funcionalidade
 - [x] Resetar formulário de cadastro após sucesso
+- [x] Adicionar encomenda com código de rastreio válido porém não encontrado na base dos correios
+- [x] Validar formato do código de rastreio
 
 ## 🚀 Getting started
 

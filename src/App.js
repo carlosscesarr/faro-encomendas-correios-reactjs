@@ -91,8 +91,16 @@ function App() {
         type: "LS",
       });
 
-      const eventos = data.objeto[0].evento.reverse();
-      const ultimoEvento = eventos.pop();
+      let eventos = [];
+      let ultimoEvento = {};
+      if (!data.objeto[0].evento) {
+        eventos = [{tipo: 0, status: 0, descricao: "Ainda não encontrado"}]
+        ultimoEvento = eventos.pop();
+      } else {
+        eventos = data.objeto[0].evento.reverse();
+        ultimoEvento = eventos.pop();
+      }
+
       const rastreio = {
         descricao,
         code,
@@ -147,6 +155,7 @@ function App() {
     setCode("");
     setDescricao("");
   }
+
   const checkObjetoExiste = (codeEncomenda) => {
     let existe = false;
     if (objetos.length === 0) {
@@ -162,6 +171,7 @@ function App() {
 
     return existe;
   };
+
   const RenderIconStatus = ({ tipoEvento, statusEvento }) => {
     if (tipoEvento === "DO" || tipoEvento === "RO") {
       return <ObjetoEncaminhado className="w-6 h-6" />;
@@ -203,6 +213,7 @@ function App() {
 
     return <StatusDefaultIcon className="w-6 h-6" />;
   };
+
   const ButtonAddRastreio = ({ loading, rest }) => {
     return (
       <button
